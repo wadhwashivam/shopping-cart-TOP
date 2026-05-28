@@ -1,0 +1,69 @@
+.cardsParentDiv{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-left: 50px;
+}
+
+.cardsDiv{
+    justify-content: space-evenly;
+    border: 1px solid grey;
+    border-radius: 10px;
+    flex: 0 0 calc(30% - 10px);
+    min-height: 12em;
+    box-shadow: 5px 5px grey;
+}
+
+.productTitle {
+    font-size: 30px;
+    display: block;
+}
+
+.quantityDiv{
+    margin-top: 40px;
+    margin-left: 150px;
+    border: 1px solid red;
+    width: 250px;
+
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.plusMinusButtons{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-left: 2em;
+}
+
+.plusMinusItemBtn{
+    margin-top: 20px;
+    width: 30px;
+}
+
+label{
+    font-size: 20px;
+}
+
+button{
+    border: none;
+    width: auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 50px;
+    background-color: aliceblue;
+    transition: font-size 0.3s ease-in-out;
+}
+button:hover{
+    background-color: aqua;
+    font-size: 20px;
+}
+
+input {
+    width: 50px;
+}

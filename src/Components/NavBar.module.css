@@ -1,0 +1,16 @@
+.list{
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid grey;
+    padding-bottom: 5px
+}
+
+.listItems{
+    list-style-type: none;
+    font-weight: bolder;
+    font-size: 36px;
+}
+
+.listItems:active{
+    color: red
+}
