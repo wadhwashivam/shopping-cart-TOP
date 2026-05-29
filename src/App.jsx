@@ -8,7 +8,7 @@ function App() {
   
   return (
     <div>
-      <NavBar />
+      <NavBar cart = {cart}/>
       <AppRoutes cart = {cart} setCart = {setCart}/>
     </div>
   )

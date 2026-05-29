@@ -18,7 +18,7 @@ function Quantity({product,setCart}){
     }
 
     function handleAddToCart(){
-        if (quantity< 0){
+        if (quantity == 0){
             return ;
         }
         setCart(prevCart => {
@@ -56,7 +56,6 @@ function Quantity({product,setCart}){
                     <img src="/src/assets/minus.png" alt="Minus Image" className= {styles.plusMinusItemBtn} onClick={decreaseHandle}/>
                 </div>
                 <button type="submit" className= {styles.button} onClick={handleAddToCart}>Add to Cart</button>
-                <p>{quantity}</p>
             </div>
         </>
     )
