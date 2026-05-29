@@ -1,9 +1,9 @@
-import { useState } from "react";
 import styles from "./Shop.module.css";
+import { useState } from "react";
 
-function Quantity(){
-    const [quantity, setQuantity] = useState(0);
+function Quantity({product,setCart}){
 
+    const [ quantity, setQuantity] = useState(0);
     function increaseHandle(){
         setQuantity(prev => prev + 1);
     }
@@ -16,6 +16,36 @@ function Quantity(){
     function handleChange(e){
         setQuantity(Number(e.target.value));
     }
+
+    function handleAddToCart(){
+        if (quantity< 0){
+            return ;
+        }
+        setCart(prevCart => {
+            const existingItem = prevCart.find(
+                item => item.id === product.id
+            );
+            if (existingItem){
+                return prevCart.map(item =>
+                    item.id === product.id ? {
+                        ...item, quantity: item.quantity + quantity,
+                    }: item
+                );
+            }
+            return [
+                ...prevCart,
+                {
+                    id: product.id,
+                    title: product.title,
+                    price: product.price,
+                    image:product.image,
+                    quantity,
+                },
+            ];
+        });
+    }
+
+
     return (    
         <>
             <div className = {styles.quantityDiv}>
@@ -25,7 +55,7 @@ function Quantity(){
                     <img src="/src/assets/plus.png" alt="Plus Image" className= {styles.plusMinusItemBtn} onClick={increaseHandle}/>
                     <img src="/src/assets/minus.png" alt="Minus Image" className= {styles.plusMinusItemBtn} onClick={decreaseHandle}/>
                 </div>
-                <button type="submit" className= {styles.button}>Add to Cart</button>
+                <button type="submit" className= {styles.button} onClick={handleAddToCart}>Add to Cart</button>
                 <p>{quantity}</p>
             </div>
         </>

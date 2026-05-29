@@ -1,0 +1,32 @@
+.cartPrimaryDiv{
+    /* border: 1px solid red; */
+    display: flex;
+    margin-left: 250px;
+    width: 950px;
+    box-shadow: 5px 5px grey;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.cartPrimaryDiv img{
+    width: 200px;
+    height: 200px;
+}
+
+
+.productQuantity{
+    margin-left:50px;
+    /* border: 1px solid red; */
+}
+
+.productDetails{
+    margin-left: 20px;
+}
+
+.cartTotalDiv{
+    /* border: 1px solid red; */
+    width: max-content;
+    height: max-content;
+    margin-left: 600px;
+    /* margin-top: 150px; */
+}

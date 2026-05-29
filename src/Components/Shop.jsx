@@ -3,10 +3,11 @@ import styles from "./Home.module.css";
 import Quantity from "./Quantity";
 import mainStyles from "./Shop.module.css";
 
-function Shop(){
+function Shop({setCart}){
 
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
+
     useEffect(() => {
          fetch('https://fakestoreapi.com/products')
             .then(response => response.json())
@@ -14,7 +15,6 @@ function Shop(){
                 setProducts(data);
                 setLoading(false);
             });
-
     },[]);
 
 
@@ -30,7 +30,7 @@ function Shop(){
                         <span className= {mainStyles.productTitle}>{product.title}</span> 
                         <img src={product.image} alt={product.title} className={mainStyles.productImage}/>              
                         <h2>${product.price}</h2>     
-                        <Quantity />
+                        <Quantity product = {product} setCart = {setCart}/>
                     </div>
                 )})}
             </div>

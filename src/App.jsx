@@ -1,11 +1,15 @@
+import { useState } from "react";
 import NavBar from "./Components/NavBar";
 import AppRoutes from "./Routes/AppRoutes";
 
 function App() {
+  const [cart, setCart] = useState([]);
+
+  
   return (
     <div>
       <NavBar />
-      <AppRoutes />
+      <AppRoutes cart = {cart} setCart = {setCart}/>
     </div>
   )
 }
