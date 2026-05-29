@@ -20,9 +20,8 @@
 }
 
 .quantityDiv{
-    margin-top: 40px;
-    margin-left: 150px;
-    border: 1px solid red;
+    margin-left: 80px;
+    /* border: 1px solid red; */
     width: 250px;
 
 }
@@ -66,4 +65,9 @@ button:hover{
 
 input {
     width: 50px;
+}
+
+.productImage{
+    width: 200px;
+    height: 200px;
 }
