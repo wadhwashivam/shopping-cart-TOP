@@ -1,7 +1,10 @@
 import styles from "./Home.module.css";
 import mainStyles from "./Cart.module.css";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
-function Cart( {cart} ){
+function Cart(){
+    const {cart} = useContext(CartContext);
     return(
         <>
         <div className={styles.primaryContainer}>

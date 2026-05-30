@@ -3,7 +3,7 @@ import styles from "./Home.module.css";
 import Quantity from "./Quantity";
 import mainStyles from "./Shop.module.css";
 
-function Shop({setCart}){
+function Shop(){
 
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -30,7 +30,7 @@ function Shop({setCart}){
                         <span className= {mainStyles.productTitle}>{product.title}</span> 
                         <img src={product.image} alt={product.title} className={mainStyles.productImage}/>              
                         <h2>${product.price}</h2>     
-                        <Quantity product = {product} setCart = {setCart}/>
+                        <Quantity product = {product} />
                     </div>
                 )})}
             </div>

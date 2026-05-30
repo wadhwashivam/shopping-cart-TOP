@@ -1,7 +1,9 @@
 import styles from "./Shop.module.css";
-import { useState } from "react";
+import { useContext,useState } from "react";
+import { CartContext } from "../context/CartContext";
 
-function Quantity({product,setCart}){
+function Quantity({product}){
+    const { setCart } = useContext(CartContext);
 
     const [ quantity, setQuantity] = useState(0);
     function increaseHandle(){
